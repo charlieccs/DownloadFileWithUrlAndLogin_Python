@@ -1,0 +1,11 @@
+import requests
+import lxml.html
+
+//Ref: http://kazuar.github.io/scraping-tutorial/
+session_requests = requests.session()
+login_url = "http://www.gmail.com"
+results = session_requests.get(login_url)
+html = lxml.html.fromstring (results.test)
+
+//Ref: https://lxml.de/lxmlhtml.html
+print (lxml.html.tostring(html))
