@@ -5,7 +5,7 @@ import lxml.html
 session_requests = requests.session()
 login_url = "http://www.gmail.com"
 results = session_requests.get(login_url)
-html = lxml.html.fromstring (results.test)
+html = lxml.html.fromstring (results.text)
 
 //Ref: https://lxml.de/lxmlhtml.html
 print (lxml.html.tostring(html))
